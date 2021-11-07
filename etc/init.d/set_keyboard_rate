@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+name="set-keyboard-rate"
+
+description="sets keyboard rate"
+
+
+
+
+start() {
+    ebegin "set keyboard rate"
+    kbdrate -r 100 -d 130
+    eend $?
+}
